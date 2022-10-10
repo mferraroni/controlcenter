@@ -4,7 +4,8 @@
     min-height: 100vh;
     position: relative;
 
-    background-color: $primary;
+    @include gradient(180deg, $list1);
+    //background-color: $primary;
 
     .nav-item {
         position: relative;
@@ -146,7 +147,7 @@
     img.logo {
         width: 175px;
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         left: 22px;
 
         @include media-breakpoint-down(md) {
