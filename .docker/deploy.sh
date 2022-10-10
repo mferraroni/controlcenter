@@ -6,7 +6,7 @@
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 #
 
-ENV=$1
+ENV=${1:-dev}
 
 # Run the supported PHP versions or work backwards to the one we find. Useful in environments with more versions installed
 function run_php () {
@@ -32,7 +32,7 @@ if [ "$ENV" != "init" ]; then
 fi
 
 # Pull latest updates from Git
-git pull origin master
+#git pull --rebase origin master
 
 # Install dependecies
 if [ "$ENV" = "dev" ]; then 
